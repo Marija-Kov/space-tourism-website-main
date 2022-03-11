@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <title>Frontend Mentor | Space tourism website</title>
+  <style>
+    @font-face {
+      font-family: Bellefair-Regular;
+      src: url('Bellefair-Regular.otf');
+    }
+    @font-face {
+      font-family: BarlowCondensed-ExtraLight;
+      src: url('BarlowCondensed-ExtraLight.ttf');
+    }
+    @font-face {
+      font-family: Barlow-ExtraLight;
+      src: url('Barlow-ExtraLight.otf');
+    }
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      width: 100vw;
+      height: 667px;
+      color: white;
+      background-color: black;
+      background-image: url('assets/home/background-home-mobile.jpg');
+      background-repeat:no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      align-content: center;
+    }
+    svg.logo {
+      position: relative;
+      top: 26px;
+      left: 26px;
+    }
+    svg.ham {
+      position: relative;
+      left: 75vw;
+      top: 12px;
+      
+    }
+    .line {
+      display: none;
+      border-bottom: 1px rgba(255, 255, 255, 0.307) solid;
+      width: 38%;
+      position: relative;
+      top: 3px;
+      left: 150px;
+    }
+    nav {
+      background: rgba(255, 192, 203, 0.185);
+      backdrop-filter: blur(20px);
+      display: none;
+    }
+    nav > a {
+      color: white;
+      font-family: BarlowCondensed-ExtraLight;
+      text-decoration: none;
+      letter-spacing: 1.6px;
+
+    }
+  
+    div.intro {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+      margin: 0 6vw;
+      top: 75px;
+      text-align: center;
+      width: 90vw;
+      max-height: 276px;
+    }
+    h1{
+      font-family: Bellefair-Regular;
+      font-size: 80px;
+      letter-spacing: 4px;
+      font-weight: 400;
+    }
+    h5{
+      font-family: BarlowCondensed-ExtraLight;
+      font-size: 16px;
+      letter-spacing: 4.8px; 
+    }
+    p.intro{
+      font-family: BarlowCondensed-ExtraLight;
+      font-size: 15px;
+      letter-spacing: 1.25px;
+      line-height: 25px;
+      font-family: Barlow-ExtraLight;
+    }
+    .exp{
+      position: relative;
+      top: 150px;
+      margin: auto;
+      width: 150px;
+      height: 150px;
+      background: white;
+      color: black;
+      border-radius: 100%;
+      font-family: Bellefair-Regular;
+      font-size: 20px;
+      letter-spacing: 2.5px;
+      text-align: center;
+      padding-top: 65px;
+    }
+
+    @media (min-width: 600px) {
+      body {
+      height: 100vh;
+      
+      color: white;
+      background-image: url('assets/home/background-home-tablet.jpg');
+    }
+      svg.logo {
+       position: absolute;
+    }
+      svg.ham {
+      display: none; 
+    }
+    nav {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      padding-right: 15px;
+      justify-content: flex-end;
+      
+    }
+
+    nav > a {
+      padding: 40px 20px;
+      border-bottom: solid rgba(255, 255, 255, 0) 3px;
+    }
+
+    nav > a:hover {
+      border-bottom: solid rgba(255, 255, 255, 0.5) 3px;
+    }
+
+    nav > a:active {
+      border-bottom: solid rgba(255, 255, 255) 3px;
+    }
+  
+    h1{
+      font-family: Bellefair-Regular;
+      font-size: 150px;
+      letter-spacing: 4px;
+      font-weight: 400;
+    }
+    div.intro {
+      align-items: center;
+      top: 140px;
+    }
+    p.intro {
+      max-width: 450px; 
+    }
+    .exp{
+     width: 242px;
+     height: 242px;
+     top: 320px; 
+     font-size: 30px;
+     padding-top: 105px;
+    }
+
+  } /*media tablet*/
+
+  @media (min-width: 1024px){
+
+    body { 
+      background-image: url('assets/home/background-home-desktop.jpg');
+      /*background-position-x: -100px;*/
+    }
+    .line {
+      display: block;
+    }
+    svg.logo {
+      top: 82px;
+    }
+    nav {
+      top: 55px;
+      gap: 50px;
+      padding-right: 100px;
+    }
+    div.intro {
+      margin: 0;
+      text-align: left;
+      align-content: left;
+      top: 350px;
+      left:-300px;
+    }
+    h1, p.intro, h5 {
+      text-align: left;
+      max-width: 450px;
+      left: 0;
+    }
+     h5 {
+      font-size: 28px;
+      width: 100%;
+    }
+    .exp {
+      margin: 0;
+      width: 274px;
+      height: 274px;
+      top: 130px;
+      padding-top: 120px;
+      left: 1000px;
+    }
+   
+  } /*media desktop*/
+  </style>
+</head>
+<body>
+
+  <nav>
+  <a href="index.html">HOME</a>
+  <a href="destination-moon.html">DESTINATION</a>
+  <a href="crew-commander.html">CREW</a>
+  <a href="technology-vehicle.html">TECHNOLOGY</a>
+  </nav>
+  <p class="line"></p>
+  <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg>
+  <svg class="ham" xmlns="http://www.w3.org/2000/svg" width="24" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/></g></svg>
+<div class="intro">
+  <h5>SO, YOU WANT TO TRAVEL TO</h5>
+  <h1>SPACE</h1>
+  <p class="intro">Let’s face it; if you want to go to space, you might as well genuinely go to 
+  outer space and not hover kind of on the edge of it. Well sit back, and relax 
+  because we’ll give you a truly out of this world experience!</p>
+</div>
+
+  <p class="exp">EXPLORE</p>
+<script>
+
+</script>
+</body>
+</html>
