@@ -1,0 +1,144 @@
+@font-face {
+  font-family: Bellefair-Regular;
+  src: url("fonts/Bellefair-Regular.otf");
+}
+@font-face {
+  font-family: BarlowCondensed-ExtraLight;
+  src: url("fonts/BarlowCondensed-ExtraLight.ttf");
+}
+@font-face {
+  font-family: Barlow-ExtraLight;
+  src: url("fonts/Barlow-ExtraLight.otf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: 667px;
+  color: white;
+  background-color: black;
+  background-image: url("assets/home/background-home-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  align-content: center;
+}
+svg.logo {
+  position: relative;
+  top: 26px;
+  left: 26px;
+}
+svg.ham {
+  position: relative;
+  left: 75vw;
+  top: 12px;
+}
+.line {
+  display: none;
+  border-bottom: 1px rgba(255, 255, 255, 0.307) solid;
+  width: 38%;
+  position: relative;
+  top: 3px;
+  left: 150px;
+}
+nav {
+  background: rgba(255, 192, 203, 0.185);
+  backdrop-filter: blur(20px);
+  display: none;
+}
+nav > a {
+  color: white;
+  font-family: BarlowCondensed-ExtraLight;
+  text-decoration: none;
+  letter-spacing: 1.6px;
+}
+
+div.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  margin: 0 6vw;
+  top: 75px;
+  text-align: center;
+  width: 90vw;
+  max-height: 276px;
+}
+h1 {
+  font-family: Bellefair-Regular;
+  font-size: 80px;
+  letter-spacing: 4px; /**/
+  font-weight: 400;
+}
+h5 {
+  font-family: BarlowCondensed-ExtraLight;
+  font-size: 16px;
+  letter-spacing: 4.8px;
+}
+p.intro {
+  font-size: 15px;
+  letter-spacing: 1.25px;
+  line-height: 25px;
+  font-family: Barlow-ExtraLight;
+}
+
+@media screen and (min-width: 600px) {
+  svg.logo {
+    position: absolute;
+  }
+  svg.ham {
+    display: none;
+  }
+
+  nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-right: 15px;
+    justify-content: flex-end;
+  }
+  nav > a {
+    padding: 40px 20px;
+    border-bottom: solid rgba(255, 255, 255, 0) 3px;
+  }
+
+  nav > a:hover {
+    border-bottom: solid rgba(255, 255, 255, 0.5) 3px;
+  }
+
+  nav > a:active {
+    border-bottom: solid rgba(255, 255, 255, 1) 3px;
+  }
+  p.intro {
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .line {
+    display: block;
+  }
+  svg.logo {
+    top: 82px;
+  }
+  nav {
+    top: 55px;
+    gap: 50px;
+    padding-right: 100px;
+  }
+  div.intro {
+    text-align: left;
+  }
+
+  h1,
+  p.intro,
+  h5 {
+    text-align: left;
+    max-width: 450px;
+    left: 0;
+  }
+}

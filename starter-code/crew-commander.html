@@ -5,138 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" type="text/css" href="crew.css">
   <title>Frontend Mentor | Space tourism website</title>
-  <style>
-    @font-face {
-    font-family: Bellefair-Regular;
-    src: url('Bellefair-Regular.otf');
-  }
-  @font-face {
-    font-family: BarlowCondensed-ExtraLight;
-    src: url('BarlowCondensed-ExtraLight.ttf');
-  }
-  @font-face {
-    font-family: Barlow-ExtraLight;
-    src: url('Barlow-ExtraLight.otf');
-  }
-  *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    width: 100vw;
-    height: 710px;
-    color: white;
-    background-color: black;
-    background-image: url('assets/crew/background-crew-mobile.jpg');
-    background-repeat:no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    align-content: center;
-  }
-  svg.logo {
-    position: relative;
-    top: 26px;
-    left: 26px;
-  }
-  svg.ham {
-    position: relative;
-    left: 75vw;
-    top: 12px; 
-  }
-  img.crew {
-      height: 243px;
-      position: relative;
-      margin: 0 28%;
-      top: 90px;
-    }
-    .line {
-      display: none;
-      border-bottom: 1px rgba(255, 255, 255, 0.307) solid;
-      width: 38%;
-      position: relative;
-      top: 3px;
-      left: 150px;
-    }
-    nav {
-      backdrop-filter: blur(20px);
-      display: none;
-    }
-
-    div.intro {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      position: relative;
-      margin: 0 6vw;
-      top: 150px;
-      text-align: center;
-      width: 90vw;
-      max-height: 276px;
-    }
-    .line1 {
-      position: relative;
-      top: 86px;
-      margin: auto;
-      border-bottom: 1px rgba(255, 255, 255, 0.307) solid;
-      width: 90%;
-      
-    }
-    #radio-group {
-      position: relative;
-      top: -70px;
-      left: 40%;
-      display: flex;
-      flex-direction: row;
-      gap: 15px;
-      max-width: fit-content;
-    }
-    input[type="radio"] {
-      appearance: none;    /* https://moderncss.dev/pure-css-custom-styled-radio-buttons/ */
-      width: 10px;
-      height: 10px;
-      border-radius: 100%;
-      background-color: rgba(255, 255, 255, 0.397);
-    }
-    input[type="radio"]:checked {
-      background-color: rgb(255, 255, 255);
-    }
-    
-    h1 {
-      font-family: Bellefair-Regular;
-      letter-spacing: 1px;
-    }
-    h1.role {
-     font-size: 16px;
-     color: rgba(255, 255, 255, 0.5);
-    }
-    h1.name {
-      font-size: 24px;
-    }
-    h5{
-      font-family: BarlowCondensed-ExtraLight;
-      font-size: 16px;
-      letter-spacing: 4.8px; 
-    }
-    h5.category{
-      position: relative;
-      top: 48px;
-      text-align: center;
-      letter-spacing: 2.3px;
-    }
-    p.bio{
-      font-family: BarlowCondensed-ExtraLight;
-      font-size: 13px;
-      letter-spacing: 1.25px;
-      line-height: 25px;
-      font-family: Barlow-ExtraLight;
-      position: relative;
-      
-    }
-
-  </style>
+ 
 </head>
 <body>
   <nav>
@@ -153,54 +24,12 @@
   <p class="line1"></p>
   
 <div class="intro">
- <h1 class="role"></h1>
-<h1 class="name"> DOUGLAS HURLEY</h1> 
-<p class="bio">
-  Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
-  and former NASA astronaut. He launched into space for the third time as 
-  commander of Crew Dragon Demo-2.
-</p>
+<h1 class="role">|</h1>
+<h1 class="name">|</h1> 
+<p class="bio">|</p>
 </div>
-<script>
- 
-             fetch('data.json')
-            .then(response => {
-            if(!response.ok) {
-              throw new Error(`HTTP error! status: ${response.status}`)
-            }else{
-              return response.json();
-            }
-            }) 
-            .then(data => {
-             let radioGroup = document.createElement('p');
-             radioGroup.setAttribute('id','radio-group');
-             for(let i = 0; i < data.crew.length; i++){
-               radioGroup.innerHTML += `<input label="${data.crew[i].role}" type="radio" id="${data.crew[i].role}" name="crew" value="${data.crew[i].role}"/>`;
-              }
-              document.body.appendChild(radioGroup);})  
-            .then(data => {
-              let radioBs = document.querySelectorAll('input');
-              let role = document.querySelector('h1[class="role"]');
-              let bio = document.querySelector('p[class="bio"]');
-              radioBs.forEach(radioB => {  
-                radioB.addEventListener('click', () => {
-                  role.innerHTML =`${radioB.getAttribute('id')}`;
-                  // WHY can't I access .json data here by reference, ex. data.crew[i].image.png ?
-                }) //forEach radioB
-              
-              })
-            
-            })
-           
-            .catch(err => console.log(err.message));
 
-function showChecked(e) {
-  console.log(e);
-  if(this.checked) {
-    document.querySelector('img').setAttribute('src', `${data.crew[i].images.png}`);
-  }
-}
-  
-</script>
+<script src="crew.js"></script>
+ 
 </body>
 </html>

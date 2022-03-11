@@ -1,0 +1,65 @@
+@import url(reusable.css);
+
+img.crew {
+  height: 243px;
+  position: relative;
+  margin: 0 28%;
+  top: 90px;
+}
+
+div.intro {
+  top: 150px;
+}
+.line1 {
+  position: relative;
+  top: 86px;
+  margin: auto;
+  border-bottom: 1px rgba(255, 255, 255, 0.307) solid;
+  width: 90%;
+}
+#radio-group {
+  position: relative;
+  top: -70px;
+  left: 40%;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  max-width: fit-content;
+}
+input[type="radio"] {
+  appearance: none; /* https://moderncss.dev/pure-css-custom-styled-radio-buttons/ */
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.397);
+}
+input[type="radio"]:checked {
+  background-color: rgb(255, 255, 255);
+}
+
+h1 {
+  font-family: Bellefair-Regular;
+  letter-spacing: 1px;
+}
+h1.role {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+}
+h1.name {
+  font-size: 24px;
+}
+
+h5.category {
+  position: relative;
+  top: 48px;
+  text-align: center;
+  letter-spacing: 2.3px;
+}
+p.bio {
+  font-family: BarlowCondensed-ExtraLight;
+  font-size: 13px;
+  letter-spacing: 1.25px;
+  line-height: 25px;
+  font-family: Barlow-ExtraLight;
+  position: relative;
+}
