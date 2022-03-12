@@ -33,6 +33,31 @@ nav > a {
   /**/
 }
 
+.destination input {
+  margin-right: 30px;
+  padding-bottom: 9px;
+  letter-spacing: 1.6px;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: rgba(255, 255, 255, 0.397);
+}
+
+.destination input::before {
+  content: attr(label);
+  border-bottom: solid rgba(255, 255, 255, 0) 3px;
+}
+
+.destination input:hover {
+  border-bottom: solid rgba(255, 255, 255, 0.5) 3px;
+}
+
+.destination input:checked {
+  color: white;
+  border-bottom: solid white 3px;
+}
+
 div.intro {
   top: 150px;
   /**/

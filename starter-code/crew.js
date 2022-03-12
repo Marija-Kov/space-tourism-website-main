@@ -25,16 +25,20 @@ async function createRadioGroup(data){
 async function displayCrewMember(data){
    let radioBs = document.querySelectorAll('input');
    let role = document.querySelector('.role');
+   let name = document.querySelector('.name');
    let bio = document.querySelector('.bio');
    let img = document.querySelector('.crew');
-        radioBs.forEach(radioB => { 
-            for(let i = 0; i < radioBs.length; i++) 
-            radioB.addEventListener('click', () => {
-            role.innerHTML =`${radioB.getAttribute('id')}`;
+   for(let i = 0; i < radioBs.length; i++){ 
+        radioBs.forEach(() => { 
+            radioBs[i].addEventListener('click', () => {
+            role.innerHTML =`${radioBs[i].getAttribute('id')}`;
+            name.innerHTML = `${data.crew[i].name}`;
             bio.innerHTML = `${data.crew[i].bio}`;
-            img.setAttribute('src', `${data.crew[i].png}` )
+            img.setAttribute('src', `${data.crew[i].images.png}` )
                   
                 })
-              
+       
               })
+    radioBs[0].click();
+            }          
 }

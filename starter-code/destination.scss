@@ -22,6 +22,27 @@ nav > a {
   padding-bottom: 9px; /**/
   border-bottom: 3px solid rgba(255, 255, 255, 0); /**/
 }
+
+.destination input {
+  margin-right: 30px;
+  padding-bottom: 9px;
+  letter-spacing: 1.6px;
+  cursor: pointer;
+  appearance: none;
+  color: rgba(255, 255, 255, 0.397);
+  &::before {
+    content: attr(label);
+    border-bottom: solid rgba(255, 255, 255, 0) 3px;
+  }
+  &:hover {
+    border-bottom: solid rgba(255, 255, 255, 0.5) 3px;
+  }
+  &:checked {
+    color: white;
+    border-bottom: solid rgba(255, 255, 255, 1) 3px;
+  }
+}
+
 div.intro {
   top: 150px; /**/
 }
