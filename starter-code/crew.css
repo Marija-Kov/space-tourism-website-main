@@ -3,6 +3,10 @@ body {
   background: url("assets/crew/background-crew-mobile.jpg");
 }
 
+.hamNavMenu {
+  top: -510px;
+}
+
 img.crew {
   height: 243px;
   position: relative;

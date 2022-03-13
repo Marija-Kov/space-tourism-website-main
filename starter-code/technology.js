@@ -27,3 +27,5 @@ async function displayTechnology(data){
       techs[0].click();
   }
 }
+
+import dropMenuInit from './hamburgerMenu.js';

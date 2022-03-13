@@ -3,6 +3,9 @@
 body {
   background: url("assets/technology/background-technology-mobile.jpg");
 }
+.hamNavMenu {
+  top: -520px;
+}
 .category,
 h1,
 img,
@@ -39,7 +42,7 @@ img {
 }
 
 input {
-  z-index: 99;
+  z-index: 66;
   position: relative;
   display: inline;
   margin-right: 15px;

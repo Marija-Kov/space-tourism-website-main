@@ -1,3 +1,4 @@
+
 let dests = document.querySelectorAll('.dest');
 
 fetch('data.json')
@@ -32,3 +33,5 @@ async function displayDestination(data) {
   
 }
 }
+import dropMenuInit from './hamburgerMenu.js';
+

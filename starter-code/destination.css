@@ -37,6 +37,18 @@ nav > a {
   /**/
 }
 
+.hamNavMenu {
+  top: -680px;
+}
+
+.hamLinks {
+  top: 130px;
+}
+
+.close {
+  top: 30px;
+}
+
 .destination input {
   margin-right: 30px;
   padding-bottom: 9px;

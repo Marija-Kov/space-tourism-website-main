@@ -42,3 +42,5 @@ async function displayCrewMember(data){
     radioBs[0].click();
             }          
 }
+
+import dropMenuInit from './hamburgerMenu.js';
