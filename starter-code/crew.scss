@@ -2,40 +2,48 @@
 
 body {
   background: url("assets/crew/background-crew-mobile.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 .hamNavMenu {
-  top: -510px;
+  top: -523px;
+  right: -12px;
+}
+.close {
+  top: 40px;
+  left: 205px;
 }
 img.crew {
+  display: block;
   height: 243px;
   position: relative;
-  margin: 0 28%;
+  margin: 0 auto;
   top: 90px;
+  //background: rgba(255, 192, 203, 0.308);
 }
 
 div.intro {
-  top: 150px;
+  top: 190px;
 }
 .line1 {
   position: relative;
-  top: 86px;
-  margin: auto;
-  border-bottom: 1px rgba(255, 255, 255, 0.307) solid;
+  top: 89px;
+  margin: 0 auto;
+  border-bottom: 1px rgba(255, 255, 255, 0.24) solid;
   width: 90%;
 }
 #radio-group {
-  position: relative;
-  top: -70px;
-  left: 40%;
+  position: absolute;
+  top: 445px;
   display: flex;
-  flex-direction: row;
-  gap: 15px;
-  max-width: fit-content;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
 }
 input[type="radio"] {
   appearance: none; /* https://moderncss.dev/pure-css-custom-styled-radio-buttons/ */
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 100%;
   background-color: rgba(255, 255, 255, 0.397);
 }
@@ -47,37 +55,77 @@ h1 {
   font-family: Bellefair-Regular;
   letter-spacing: 1px;
 }
-h1.role {
-  font-size: 16px;
+.role {
+  font-family: Bellefair-Regular;
+  font-size: 20px;
   color: rgba(255, 255, 255, 0.5);
-}
-h1.name {
-  font-size: 24px;
-}
-
-h5.category {
-  position: relative;
-  top: 48px;
-  text-align: center;
-  letter-spacing: 2.3px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 p.bio {
   font-family: BarlowCondensed-ExtraLight;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 1.25px;
   line-height: 25px;
   font-family: Barlow-ExtraLight;
   position: relative;
 }
 
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
   body {
     background: url("assets/crew/background-crew-tablet.jpg");
+    background-size: cover;
+  }
+  div.intro {
+    top: -35%;
+    width: 80%;
+    max-width: 458px;
+    margin: 0 auto;
+    //background: rgba(255, 192, 203, 0.233);
+  }
+  .role {
+    font-size: 24px;
+  }
+
+  img.crew {
+    top: 50%;
+    height: 54.68%;
+  }
+  .line1 {
+    display: none;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   body {
     background: url("assets/crew/background-crew-desktop.jpg");
+    background-size: cover;
+  }
+
+  img.crew {
+    height: 550px;
+    top: 230px;
+    margin: 0;
+    margin-left: 62%;
+    left: 0;
+  }
+  div.intro {
+    top: -270px;
+    max-width: 35%;
+    margin: 0;
+    left: 10%;
+  }
+  h1.name {
+    font-size: 40px;
+    max-width: 100%;
+  }
+  #radio-group {
+    position: absolute;
+    top: 88%;
+    display: flex;
+    justify-content: flex-start;
+    left: 10%;
+    gap: 20px;
+    width: 50%;
   }
 }

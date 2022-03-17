@@ -22,22 +22,19 @@
 
 body {
   width: 100vw;
-  height: 667px;
+  height: 100vh;
   color: white;
   background-color: black;
   background-image: url("assets/home/background-home-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  overflow-y: hidden;
 }
 
 svg.logo {
   position: relative;
   top: 26px;
-  left: 26px;
+  left: 35px;
 }
 
 svg.ham {
@@ -55,11 +52,11 @@ svg.ham:hover {
   z-index: 99;
   display: block;
   float: right;
-  height: 100vh;
+  height: 110vh;
   width: 254px;
   position: relative;
   top: -470px;
-  background: rgba(255, 192, 203, 0);
+  background: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
 }
@@ -87,9 +84,8 @@ svg.ham:hover {
 .close {
   position: relative;
   display: block;
-  float: right;
   top: 40px;
-  right: 30px;
+  left: 215px;
   z-index: 999;
 }
 
@@ -100,14 +96,14 @@ svg.ham:hover {
 .line {
   display: none;
   border-bottom: 1px rgba(255, 255, 255, 0.307) solid;
-  width: 38%;
-  position: relative;
-  top: 3px;
-  left: 150px;
+  width: 39%;
+  margin-left: 10%;
+  position: absolute;
+  top: 81px;
 }
 
 nav {
-  background: rgba(255, 192, 203, 0.185);
+  background: rgba(255, 255, 255, 0.048);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
   display: none;
@@ -118,10 +114,21 @@ nav > a {
   font-family: BarlowCondensed-ExtraLight;
   text-decoration: none;
   letter-spacing: 1.6px;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 input {
   font-family: BarlowCondensed-ExtraLight;
+}
+
+.category {
+  position: relative;
+  top: 60px;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  letter-spacing: 2.5px;
 }
 
 div.intro {
@@ -134,7 +141,7 @@ div.intro {
           flex-direction: column;
   gap: 16px;
   position: relative;
-  margin: 0 6vw;
+  margin: 0 auto;
   top: 75px;
   text-align: center;
   width: 90vw;
@@ -143,10 +150,11 @@ div.intro {
 
 h1 {
   font-family: Bellefair-Regular;
-  font-size: 80px;
+  font-size: 26px;
   letter-spacing: 4px;
-  /**/
   font-weight: 400;
+  text-transform: uppercase;
+  position: relative;
 }
 
 h5 {
@@ -155,14 +163,16 @@ h5 {
   letter-spacing: 4.8px;
 }
 
-p.intro {
-  font-size: 15px;
-  letter-spacing: 1.25px;
+.description {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  letter-spacing: 0px;
   line-height: 25px;
   font-family: Barlow-ExtraLight;
+  margin: 0 auto;
 }
 
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
   svg.logo {
     position: absolute;
   }
@@ -170,56 +180,78 @@ p.intro {
     display: none;
   }
   nav {
-    position: relative;
+    position: absolute;
+    right: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 100%;
-    padding-right: 15px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0 25px;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
   nav > a {
-    padding: 40px 20px;
+    margin: 0px 20px;
+    padding: 32px 0px;
     border-bottom: solid rgba(255, 255, 255, 0) 3px;
   }
   nav > a:hover {
     border-bottom: solid rgba(255, 255, 255, 0.5) 3px;
   }
-  nav > a:active {
+  nav > a:active,
+  nav > a:checked {
     border-bottom: solid white 3px;
   }
-  p.intro {
-    max-width: 450px;
+  .description {
+    max-width: 458px;
+  }
+  .category {
+    font-size: 20px;
+    text-align: left;
+    margin-left: 7%;
+    width: 90%;
+    top: 14%;
+  }
+  h1 {
+    font-size: 40px;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .line {
-    display: block;
+    display: inline-block;
   }
   svg.logo {
-    top: 82px;
+    top: 57px;
+    left: 50px;
   }
   nav {
-    top: 55px;
+    top: 40px;
     gap: 50px;
-    padding-right: 100px;
-  }
-  div.intro {
-    text-align: left;
+    padding-right: 10%;
+    padding-left: 6%;
   }
   h1,
-  p.intro,
+  div.intro,
   h5 {
     text-align: left;
     max-width: 450px;
     left: 0;
+  }
+  .category {
+    font-size: 28px;
+    left: 48px;
+    top: 180px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1321px) {
+  .line {
+    width: 30%;
+    margin-left: 12%;
   }
 }
 /*# sourceMappingURL=reusable.css.map */

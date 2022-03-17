@@ -14,14 +14,16 @@ fetch('data.json')
 
 async function displayTechnology(data){
   let techName = document.querySelector('h1');
-  let intro = document.querySelector('p.intro');
-  let techImg = document.querySelector('img');
+  let description = document.querySelector('.description');
+  let techImgHor = document.querySelector('.hor');
+  let techImgVer = document.querySelector('.ver');
   for(let i = 0; i < techs.length; i++){ 
       techs.forEach(() => {
           techs[i].addEventListener('click', () => {
               techName.innerHTML = `${data.technology[i].name}`;
-              intro.innerHTML = `${data.technology[i].description}`;
-              techImg.setAttribute('src', `${data.technology[i].images.landscape}`) ;
+              description.innerHTML = `${data.technology[i].description}`;
+              techImgHor.setAttribute('src', `${data.technology[i].images.landscape}`) ;
+              techImgVer.setAttribute('src', `${data.technology[i].images.portrait}`) ;
           })
       })
       techs[0].click();

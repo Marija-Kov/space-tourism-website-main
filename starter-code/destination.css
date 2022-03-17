@@ -3,42 +3,32 @@ body {
   background-image: url("assets/destination/background-destination-mobile.jpg");
 }
 
-img.moon {
+img {
+  display: block;
   width: 170px;
   height: 170px;
+  margin: auto;
   position: relative;
-  margin: 0 28%;
   top: 90px;
 }
 
-nav.destination {
+.destination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 14px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: 27px;
   position: relative;
   top: 130px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-backdrop-filter: blur(0px);
-          backdrop-filter: blur(0px);
 }
 
 nav > a {
-  padding-bottom: 9px;
+  padding-bottom: 18px;
   /**/
   border-bottom: 3px solid rgba(255, 255, 255, 0);
   /**/
 }
 
 .hamNavMenu {
-  top: -680px;
+  top: -670px;
 }
 
 .hamLinks {
@@ -46,11 +36,12 @@ nav > a {
 }
 
 .close {
-  top: 30px;
+  top: 40px;
 }
 
 .destination input {
-  margin-right: 30px;
+  font-size: 16px;
+  margin: 0 3%;
   padding-bottom: 9px;
   letter-spacing: 1.6px;
   cursor: pointer;
@@ -74,9 +65,18 @@ nav > a {
   border-bottom: solid white 3px;
 }
 
+input[label="MOON"] {
+  margin-left: auto;
+}
+
+input[label="TITAN"] {
+  margin-right: auto;
+}
+
 div.intro {
   top: 150px;
   /**/
+  position: relative;
 }
 
 section.avg-est {
@@ -93,6 +93,7 @@ div.avg-est {
   position: relative;
   top: 200px;
   text-align: center;
+  text-transform: uppercase;
   line-height: 36px;
   padding-bottom: 20px;
 }
@@ -111,61 +112,32 @@ p.avg-est {
 .line1 {
   position: relative;
   top: 170px;
-  margin: auto;
   border-bottom: 1px rgba(255, 255, 255, 0.307) solid;
-  width: 90%;
 }
 
 h1 {
+  font-size: 60px;
   letter-spacing: 1px;
   /**/
 }
 
-h5.category {
-  position: relative;
-  top: 48px;
-  text-align: center;
-  letter-spacing: 2.3px;
-}
-
-p.intro {
-  font-size: 13px;
-  /**/
-  position: relative;
-  /**/
-  top: -10px;
-  /**/
-}
-
-@media screen and (min-width: 600px) {
+@media (min-width: 600px) {
   body {
     background-image: url("assets/destination/background-destination-tablet.jpg");
     height: 100vh;
   }
-  img.moon {
-    width: 300px;
-    height: 300px;
-    margin: 0 28%;
+  img {
+    width: 340px;
+    height: 340px;
+    margin: 0 auto;
     top: 90px;
   }
-  p.intro {
+  div.intro {
     max-width: 550px;
-    margin: 0 auto;
   }
   nav > a {
     margin: 0 20px;
-    /**/
-  }
-  nav.destination {
-    gap: 0px;
-  }
-  nav.destination > a {
-    padding: 0;
-    padding-bottom: 10px;
-  }
-  h5.category {
-    text-align: left;
-    margin: 0 40px;
+    padding: 32px 0px;
   }
   section.avg-est {
     -webkit-box-orient: horizontal;
@@ -179,38 +151,45 @@ p.intro {
 }
 
 /*media tablet*/
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   body {
     background-image: url("assets/destination/background-destination-desktop.jpg");
   }
   div.intro {
     width: 27vw;
-    top: -230px;
-    left: 47vw;
+    top: -22.5%;
+    left: 16%;
   }
-  h5.category {
-    text-align: left;
-    margin: 0;
-    margin-left: 150px;
-    top: 100px;
-    font-size: 24px;
-  }
-  img.moon {
+  img {
     height: 445px;
     width: 445px;
     margin: 0;
-    top: 23%;
-    left: 13%;
+    top: 32%;
+    left: 8%;
   }
-  nav.destination {
-    top: -270px;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    padding-right: 400px;
+  .destination {
+    top: -26.3%;
+    left: 53%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  input[label="MOON"] {
+    margin-left: 0;
+  }
+  input[label="TITAN"] {
+    margin-right: 0;
+  }
+  .destination input {
+    margin: 0;
+    margin-right: 20%;
   }
   h1 {
     font-size: 100px;
+  }
+  div.avg-est {
+    top: 0px;
+    text-align: left;
   }
   section.avg-est {
     position: relative;
@@ -223,19 +202,15 @@ p.intro {
             justify-content: flex-start;
     gap: 80px;
     padding: 0;
-    top: -18%;
+    top: -15%;
     left: 53%;
     max-width: -webkit-fit-content;
     max-width: -moz-fit-content;
     max-width: fit-content;
   }
-  div.avg-est {
-    top: 0px;
-    text-align: left;
-  }
   .line1 {
     position: relative;
-    top: -180px;
+    top: -17.5%;
     left: 53%;
     margin: 0;
     width: 28%;
@@ -243,4 +218,15 @@ p.intro {
 }
 
 /*media desktop*/
+@media (min-width: 1660px) {
+  img {
+    left: 8%;
+  }
+}
+
+@media (min-width: 2100px) {
+  .description {
+    margin: 0;
+  }
+}
 /*# sourceMappingURL=destination.css.map */

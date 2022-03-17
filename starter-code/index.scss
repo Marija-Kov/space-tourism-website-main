@@ -5,6 +5,7 @@
   position: relative;
   top: 150px;
   margin: auto;
+  padding: auto;
   width: 150px;
   height: 150px;
   background: white;
@@ -15,8 +16,16 @@
   letter-spacing: 2.5px;
   text-align: center;
   padding-top: 65px;
-}
 
+  &:hover {
+    transition: 0.35s ease-in-out;
+    outline: solid 50px rgba(255, 255, 255, 0.336);
+    font-size: 18px;
+  }
+}
+h1 {
+  font-size: 100px;
+}
 @media screen and (min-width: 600px) {
   body {
     height: 100vh;
@@ -53,7 +62,7 @@
     margin: 0;
     align-content: left;
     top: 350px;
-    left: -300px;
+    left: 200px;
   }
 
   h5 {
