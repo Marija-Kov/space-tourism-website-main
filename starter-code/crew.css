@@ -5,16 +5,6 @@ body {
   background-attachment: fixed;
 }
 
-.hamNavMenu {
-  top: -523px;
-  right: -12px;
-}
-
-.close {
-  top: 40px;
-  left: 205px;
-}
-
 img.crew {
   display: block;
   height: 243px;

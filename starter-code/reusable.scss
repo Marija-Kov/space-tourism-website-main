@@ -33,9 +33,9 @@ svg.logo {
   left: 35px;
 }
 svg.ham {
-  position: relative;
-  left: 75vw;
-  top: 12px;
+  position: absolute;
+  right: 40px;
+  top: 40px;
   z-index: 99;
   &:hover {
     cursor: pointer;
@@ -44,12 +44,12 @@ svg.ham {
 
 .hamNavMenu {
   z-index: 99;
-  display: block;
-  float: right;
-  height: 110vh;
+  display: inline-block;
+  right: 0;
+  height: 100vh;
+  top: 0;
   width: 254px;
-  position: relative;
-  top: -470px;
+  position: absolute;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(50px);
 }
@@ -74,10 +74,10 @@ svg.ham {
   }
 }
 .close {
-  position: relative;
-  display: block;
+  position: absolute;
+  display: inline-block;
   top: 40px;
-  left: 215px;
+  right: 40px;
   z-index: 999;
   &:hover {
     cursor: pointer;
@@ -103,6 +103,9 @@ nav > a {
   letter-spacing: 1.6px;
   font-size: 14px;
   text-transform: uppercase;
+}
+.active {
+  border-bottom: solid rgba(255, 255, 255, 1) 3px;
 }
 
 input {
@@ -150,11 +153,36 @@ h5 {
   margin: 0 auto;
 }
 
+.zero::before {
+  content: "00 ";
+}
+.one::before {
+  content: "01 ";
+}
+.two::before {
+  content: "02 ";
+}
+.three::before {
+  content: "03 ";
+}
+
+.zero,
+.one,
+.two,
+.three {
+  &::before {
+    color: rgba(255, 255, 255, 0.307);
+  }
+}
+
 @media (min-width: 600px) {
   svg.logo {
     position: absolute;
   }
   svg.ham {
+    display: none;
+  }
+  .hamNavMenu {
     display: none;
   }
 
@@ -176,10 +204,6 @@ h5 {
     border-bottom: solid rgba(255, 255, 255, 0.5) 3px;
   }
 
-  nav > a:active,
-  nav > a:checked {
-    border-bottom: solid rgba(255, 255, 255, 1) 3px;
-  }
   .description {
     max-width: 458px;
   }
