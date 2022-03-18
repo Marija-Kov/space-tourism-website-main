@@ -176,19 +176,19 @@ h5 {
   margin: 0 auto;
 }
 
-.zero::before {
+h5.zero::before {
   content: "00 ";
 }
 
-.one::before {
+h5.one::before {
   content: "01 ";
 }
 
-.two::before {
+h5.two::before {
   content: "02 ";
 }
 
-.three::before {
+h5.three::before {
   content: "03 ";
 }
 
@@ -266,6 +266,18 @@ h5 {
     text-align: left;
     max-width: 450px;
     left: 0;
+  }
+  a.zero::before {
+    content: "00 ";
+  }
+  a.one::before {
+    content: "01 ";
+  }
+  a.two::before {
+    content: "02 ";
+  }
+  a.three::before {
+    content: "03 ";
   }
   .category {
     font-size: 28px;
