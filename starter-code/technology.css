@@ -60,7 +60,7 @@ input::before {
 }
 
 input:hover::before {
-  background: rgba(255, 255, 255, 0.397);
+  border: solid 1px white;
   border-radius: 50%;
   padding: 12px 17px;
 }

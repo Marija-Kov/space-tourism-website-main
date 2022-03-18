@@ -56,7 +56,7 @@ input {
     background: rgba(255, 255, 255, 0);
   }
   &:hover::before {
-    background: rgba(255, 255, 255, 0.397);
+    border: solid 1px rgba(255, 255, 255, 1);
     border-radius: 50%;
     padding: 12px 17px;
   }
