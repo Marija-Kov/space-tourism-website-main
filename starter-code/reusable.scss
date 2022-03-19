@@ -10,6 +10,7 @@
   font-family: Barlow-ExtraLight;
   src: url("fonts/Barlow-ExtraLight.otf");
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -172,6 +173,24 @@ h5.three::before {
 .three {
   &::before {
     color: rgba(255, 255, 255, 0.307);
+  }
+}
+
+h1,
+h5,
+p,
+img,
+input {
+  animation: fadeIn 0.75s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
   }
 }
 

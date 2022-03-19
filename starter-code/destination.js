@@ -19,9 +19,9 @@ async function displayDestination(data) {
     let distance = document.querySelector('#dist');
     let travelTime = document.querySelector('#time');
     let destImg = document.querySelector('.destImg');
-    for(let i = 0; i < dests.length; i++){ 
+    for(let i = 0; i < dests.length; i++){    
   dests.forEach(() => {
-      dests[i].addEventListener('click', () => {
+      dests[i].addEventListener('click', () => { 
           destName.innerHTML = `${data.destinations[i].name}`;
           description.innerHTML = `${data.destinations[i].description}`;
           distance.innerHTML = `${data.destinations[i].distance}`;
