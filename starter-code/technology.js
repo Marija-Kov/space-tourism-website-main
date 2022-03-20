@@ -9,6 +9,7 @@ fetch('data.json')
             }
             }) 
             .then(json => displayTechnology(json))
+            .then(initRadioFadeIn)
             .catch(err => console.log(err.message));
 
 
@@ -29,5 +30,20 @@ async function displayTechnology(data){
       techs[0].click();
   }
 }
+
+async function initRadioFadeIn(){
+    techs.forEach(tech=>{
+      tech.addEventListener('click', ()=>{
+        let fadeEls = document.querySelectorAll('.fade');
+        fadeEls.forEach(fadeEl => { 
+         if (fadeEl.classList.contains('celest')){
+            fadeEl.classList.remove('celest')
+         }else if (!fadeEl.classList.contains('celest')){
+                   fadeEl.classList.add('celest')
+    } 
+    })  
+    })
+    })
+  }
 
 import dropMenuInit from './hamburgerMenu.js';
