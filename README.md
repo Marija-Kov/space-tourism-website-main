@@ -1,5 +1,6 @@
 # Frontend Mentor - Space tourism website solution
 
+Useful resources:
 
 - https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
 
