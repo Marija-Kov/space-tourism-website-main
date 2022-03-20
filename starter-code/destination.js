@@ -10,6 +10,7 @@ fetch('data.json')
             }
             }) 
             .then(json => displayDestination(json))
+            .then(initRadioFadeIn)
             .catch(err => console.log(err.message));
 
 
@@ -30,8 +31,24 @@ async function displayDestination(data) {
       })
   })
   dests[0].click();
+ 
   
 }
 }
+
+ async function initRadioFadeIn(){
+    dests.forEach(dest=>{
+      dest.addEventListener('click', ()=>{
+         if (document.querySelector('img').classList.contains('celest')){
+      document.querySelector('img').classList.remove('celest')
+    }else if (!document.querySelector('img').classList.contains('celest')){
+      document.querySelector('img').classList.add('celest')
+    } 
+        
+      })
+    })
+  }
+
+
 import dropMenuInit from './hamburgerMenu.js';
 
