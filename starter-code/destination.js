@@ -39,13 +39,15 @@ async function displayDestination(data) {
  async function initRadioFadeIn(){
     dests.forEach(dest=>{
       dest.addEventListener('click', ()=>{
-         if (document.querySelector('img').classList.contains('celest')){
-      document.querySelector('img').classList.remove('celest')
-    }else if (!document.querySelector('img').classList.contains('celest')){
-      document.querySelector('img').classList.add('celest')
+        let fadeEls = document.querySelectorAll('.fade');
+        fadeEls.forEach(fadeEl => { 
+         if (fadeEl.classList.contains('celest')){
+            fadeEl.classList.remove('celest')
+         }else if (!fadeEl.classList.contains('celest')){
+                   fadeEl.classList.add('celest')
     } 
-        
-      })
+    })  
+    })
     })
   }
 

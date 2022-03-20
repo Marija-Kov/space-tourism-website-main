@@ -209,8 +209,8 @@ input {
 }
 
 .celest {
-  -webkit-animation: fade1 1s;
-          animation: fade1 1s;
+  -webkit-animation: fade1 0.5s;
+          animation: fade1 0.5s;
 }
 
 @-webkit-keyframes fade1 {
